@@ -12,8 +12,10 @@ Produces the following files:
     └── <name>
         ├── <name>.js
         ├── <name>.scss
+        ├── <name>.story.js
         └── <name>.test.js
 ```
+It also imports the newly created `.story` file in the `components/stories.js` file.
 
 # Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
@@ -92,6 +94,6 @@ render () {
 }
 ```
 
-## Storybooks
+# Storybooks
 
 This project is also set up to run [Storybook](https://github.com/storybooks/storybook) with the same modified webpack configuration as what is applied to create-react-app.
