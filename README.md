@@ -1,5 +1,24 @@
+# Hygen
+This configuration supports blueprinting with [hygen](http://www.hygen.io/quick-start).
+
+## Generators
+Component generator
+```
+hygen component new --name <name>
+```
+Produces the following files:
+```
+└── components
+    └── <name>
+        ├── <name>.js
+        ├── <name>.scss
+        └── <name>.test.js
+```
+
+# Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+# Rewired
 In addition to the vanilla setup from `create-react-app` I've used [React App Rewired](https://github.com/timarney/react-app-rewired) to tweak 2 things:
 - SCSS is now enabled in conjunction with CSS Modules.
 - [SASS Resources Loader](https://github.com/shakacode/sass-resources-loader) is configured targetting the `/style/resources` directory. This is really just a QOL thing and can be removed pretty easily.
