@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
+    "enzyme": "^3.3.0",
     "node-sass": "^4.7.2",
     "react-app-rewired": "^1.4.1",
     "sass-loader": "^6.0.6",
