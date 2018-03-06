@@ -1,5 +1,63 @@
+# Hygen
+This configuration supports blueprinting with [hygen](http://www.hygen.io/quick-start).
+
+## Generators
+### Component generator
+```
+hygen component new --name <name>
+```
+Produces the following files:
+```
+└── components
+    └── <name>
+        ├── <name>.js
+        ├── <name>.scss
+        └── <name>.test.js
+```
+
+### Container generator
+```
+hygen container new --name <name> --document? --duck? <duck>
+```
+Produces the following files:
+```
+└── containers
+    └── <name>
+        ├── <name>.js
+        └── <name>.test.js
+```
+Adding the optional `--document` flag will add some JSDoc comments to the container file itself and some comments to the test.
+Adding the optional `--duck` flag will import the operations from that duck automatically.
+
+### Duck Generator
+```
+hygen duck new --name <name> --dummy? --document?
+```
+Produces the following files:
+```
+└── redux
+    └── duck
+        ├── actions.js
+        ├── <name>.test.js
+        ├── index.js
+        ├── operations.js
+        ├── reducers.js
+        ├── selectors.js
+        └── types.js
+```
+Adding the `--dummy` flag will fill in the files with a dummy duck's examples.
+Adding the `--document` flag will add some documentation to each produced file detailing it's purpose.
+
+```
+hygen duck newAction --name <name> --duck <duck>
+```
+Injects all of the parts of a new Action, Reducer, Operation, and Type into the provided `--duck`.
+
+
+# Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+# Rewired
 In addition to the vanilla setup from `create-react-app` I've used [React App Rewired](https://github.com/timarney/react-app-rewired) to tweak 2 things:
 - SCSS is now enabled in conjunction with CSS Modules.
 - [SASS Resources Loader](https://github.com/shakacode/sass-resources-loader) is configured targetting the `/style/resources` directory. This is really just a QOL thing and can be removed pretty easily.
