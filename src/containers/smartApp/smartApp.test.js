@@ -17,6 +17,11 @@ describe('Smart App', () => {
     })
   })
 
+  /* There's a lot of talk in the redux community about how to test
+   * these containers, some people mount them with a mocked store,
+   * some people don't test them at all as they're usually quite simple
+   * functions.
+   */
   describe('map dispatch to props', () => {
     it('should dispatch quack', () => {
       expect(typeof mapDispatchToProps().quack).toBe('function')
