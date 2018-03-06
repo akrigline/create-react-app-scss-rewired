@@ -36,7 +36,7 @@ hygen duck new --name <name> --dummy? --document?
 Produces the following files:
 ```
 └── redux
-    └── duck
+    └── <name>
         ├── actions.js
         ├── <name>.test.js
         ├── index.js
@@ -53,6 +53,11 @@ hygen duck newAction --name <name> --duck <duck>
 ```
 Injects all of the parts of a new Action, Reducer, Operation, and Type into the provided `--duck`.
 
+
+# Redux
+I've included a base implementation of redux with this setup. No middleware other than redux-devtools is set up.
+
+All connected components are within `/src/containers` and they all connect components from `/src/components`. The reducers are set up with the format from [redux re-ducks](https://github.com/alexnm/re-ducks). I'm personally still on the fence about having so many files for the same functionality, but thanks to hygen, most of the overhead is taken care of when adding a new action/reducer.
 
 # Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
